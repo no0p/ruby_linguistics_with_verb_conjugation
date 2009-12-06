@@ -124,6 +124,8 @@ New in version 0.02:
   
 == Conjugation
 
+Takes an infinitive and returns conjugation with helper methods:
+
   "run".en.past
   # => "ran"
   
@@ -135,6 +137,17 @@ New in version 0.02:
 
   "run".en.present_participle
   # => "running"
+
+Takes an infinitive, grammatical person, and tense to return a conjugated verb:
+
+  "be".en.conjugate("third_person_singular", "present")
+  # => "is"
+
+  "be".en.conjugate("first_person_singular", "present")
+  # => "am"
+
+  "be".en.conjugate("first_person_singular", "past")
+  # => "was"
 
   The functionality is a port of the verb conjugation portion of Morph Adorner.  
 

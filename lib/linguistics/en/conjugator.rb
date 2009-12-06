@@ -552,9 +552,6 @@ module Linguistics::EN
   # Receives an infinitive, tense, and person
   # Returns a conjugated verb
   def conjugate (infinitive, person, tense)
-    puts "infinitive:" + infinitive
-    puts "tense:" + tense
-    puts "person:" + person
     
     verb = infinitive.downcase
     

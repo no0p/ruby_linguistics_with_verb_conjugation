@@ -6,6 +6,10 @@
 * Michael Granger <ged@FaerieMUD.org>
 * Martin Chase <stillflame@FaerieMUD.org>
 
+== Contributor
+
+* Robert Berry <berrydigital@gmail.com>
+
 
 == Requirements
 
@@ -127,6 +131,10 @@ See the lib/linguistics/en.rb file for specific attributions.
 
 New with version 0.02: integration with the Ruby WordNet® and LinkParser
 modules (which must be installed separately).
+
+Verb Conjugation based on MorphAdorner
+
+http://morphadorner.northwestern.edu/
 
 
 == To Do
