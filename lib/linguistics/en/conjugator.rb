@@ -569,14 +569,14 @@ module Linguistics::EN
   def conjugate_present_participle(verb)
     if ( verb.match( ".*[^aeiou]e" ) )
 		  verb = verb[0..(verb.length - 1)]
-		elsif ( result.match( "ie$" ) )
-			verb = verb[0..(result.length - 2 )] + "y"
-		elsif ( result.match( ".*[aou]e" ) )
-			verb = verb[0..(result.length - 1)]
+		elsif ( verb.match( "ie$" ) )
+			verb = verb[0..(verb.length - 2 )] + "y"
+		elsif ( verb.match( ".*[aou]e" ) )
+			verb = verb[0..(verb.length - 1)]
 		elsif ( DoublingVerbs.include? verb )
-			verb	+= verb[(verb.length - 1)..verb.length]
+			verb += verb[(verb.length - 1)..verb.length]
 		end
-		result	+= "ing";
+		verb += "ing";
   end
   
   def conjugate_past(verb)
@@ -584,9 +584,9 @@ module Linguistics::EN
   end
   
   def conjugate_past_participle(verb)
-    if ( result.match("e$") )
+    if ( verb.match("e$") )
 		  verb	+= "d"
-		elsif ( result.match( ".*[^aeiou]y" ) )
+		elsif ( verb.match( ".*[^aeiou]y" ) )
 			verb = verb[0..(verb.length - 1)] + "ied";
 		else
 			if ( DoublingVerbs.include? verb )
